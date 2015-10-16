@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Marionette Contact Manager</title>
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
-    <link href="./assets/css/application.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/application.css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@
     <td><%- firstName %></td>
     <td><%- lastName %></td>
     <td>
-        <a href="#" class="btn btn-small js-show">
+        <a href="#contacts/<%= id %>" class="btn btn-small js-show">
             <i class="icon-eye-open"></i>
             Show
         </a>
@@ -55,7 +55,7 @@
 
 <script type="text/template" id="contact-view">
     <h1><%- firstName %> <%- lastName %></h1>
-    <p><strong>Phone number:</strong> <%=  phoneNumber %></p>
+    <p><strong>Phone number:</strong> <%= phoneNumber %></p>
 </script>
 
 <script src="./assets/js/vendor/jquery.js"></script>
@@ -66,6 +66,7 @@
 
 <script src="assets/js/app.js"></script>
 <script src="assets/js/entities/contact.js"></script>
+<script src="assets/js/apps/contacts/contacts_app.js"></script>
 <script src="assets/js/apps/contacts/list/list_controller.js"></script>
 <script src="assets/js/apps/contacts/list/list_view.js"></script>
 

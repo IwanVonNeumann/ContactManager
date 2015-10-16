@@ -14,7 +14,7 @@ ContactManager.module("ContactsApp.List",
 
                 contactsListView.on("childview:contact:show",
                     function (childView, model) {
-                        ContactManager.ContactsApp.Show.Controller.showContact(model);
+                        ContactManager.trigger("contact:show", model.get("id"));
                     }
                 );
 

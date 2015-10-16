@@ -41,6 +41,8 @@ ContactManager.module("Entities",
                 if (contacts === undefined) {
                     initializeContacts();
                 }
+                //contacts = new Entities.ContactCollection();
+                //contacts.fetch();
                 return contacts;
             }
         };
